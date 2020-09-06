@@ -22,7 +22,7 @@ class ActionJoke(Action):
 class ActionGetWeather(Action):
   def name(self):
     return "action_get_weather"
-  
+
   def run(self, dispatcher, tracker, domain):
     city=tracker.get_slot('location')
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={os.getenv("OPENWEATHERMAP_API_KEY")}'
